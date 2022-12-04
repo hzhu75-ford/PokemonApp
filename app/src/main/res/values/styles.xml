@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="HeaderTextLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    <style name="HeaderTextExtraLargeBold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="HeaderTextMedium" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SubTitleText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#99000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="HeaderTextMediumBold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="recycler_view_item_spacing">8dp</dimen>
+    <dimen name="detail_image_width_height">300dp</dimen>
+    <dimen name="pok_image_width_height">100dp</dimen>
+</resources>

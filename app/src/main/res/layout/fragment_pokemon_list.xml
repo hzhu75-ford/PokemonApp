@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pokemon_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pokemon_image"
+            android:layout_width="@dimen/pok_image_width_height"
+            android:layout_height="@dimen/pok_image_width_height"
+            android:background="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/todo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pokemon_name"
+            style="@style/HeaderTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/screen_margin"
+            android:layout_marginStart="@dimen/screen_margin"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@+id/pokemon_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name"/>
+        <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pokemon_types"
+            style="@style/SubTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/pokemon_image"
+            app:layout_constraintTop_toBottomOf="@id/pokemon_name"
+            android:layout_marginStart="@dimen/screen_margin"
+            tools:text="@string/app_name"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
