@@ -1,4 +1,4 @@
-package com.example.pokemon.ui.pokemonDetail
+package com.example.pokemon.ui
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column

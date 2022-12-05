@@ -40,7 +40,7 @@ android {
         freeCompilerArgs = ['-Xjvm-default=all-compatibility']
     }
     buildFeatures {
-        viewBinding true
+        dataBinding true
         compose true
     }
     composeOptions {
