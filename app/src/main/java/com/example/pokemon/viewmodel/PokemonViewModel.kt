@@ -1,5 +1,6 @@
 package com.example.pokemon.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -73,11 +74,13 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
                     PokemonItem(
                         response.name.replaceFirstChar { it.uppercase() },
                         response.sprites.getImageURL(),
-                        response.types.joinToString { it.type.name.replaceFirstChar { type -> type.uppercase() } },
-                        response.abilities.joinToString { it.ability.name.replaceFirstChar { type -> type.uppercase() } },
+                        response.types.joinToString { it.type.name.replaceFirstChar { name -> name.uppercase() } },
+                        response.abilities.joinToString("/") { it.ability.name.replaceFirstChar { name -> name.uppercase() } },
                         getStatsDetails(response.stats)
                     )
                 )
+                Log.d(TAG,"${response.abilities.size}")
+                Log.d(TAG,"${response.abilities}")
             }
 
         }
@@ -119,6 +122,10 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
             nextPageURL = nextURL
         }
         _pokemonInfo.postValue(ResponseResource.success(data = pokemonData))
+    }
+
+    companion object{
+        private const val TAG = "PokemonViewModel"
     }
 }
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.pokemon.R
 import com.example.pokemon.databinding.FragmentPokemonBinding
 import com.example.pokemon.model.network.APIHelper
@@ -59,7 +60,7 @@ class PokemonFragment : Fragment() {
             is PokemonItem -> {
                 viewModel.updateSelectedPokemon(pokemonItem)
                 Log.i(TAG, "Item Cliked ${pokemonItem}")
-                //findNavController().navigate(R.id.action_pokemonFragment_to_pokemonDetailFragment)
+                findNavController().navigate(R.id.action_pokemonHomeFragment_to_pokemonDetailFragment)
             }
             is LoadMoreItems -> {
                 viewModel.getNextPageURL()?.let {
