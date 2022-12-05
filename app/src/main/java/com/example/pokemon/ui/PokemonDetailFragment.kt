@@ -32,7 +32,7 @@ class PokemonDetailFragment : Fragment() {
                 composeView.setContent {
                     // You're in Compose world!
                     MaterialTheme {
-                        PokemonDetailDescription()
+                        PokemonDetailDescription(viewModel)
                     }
                 }
 
