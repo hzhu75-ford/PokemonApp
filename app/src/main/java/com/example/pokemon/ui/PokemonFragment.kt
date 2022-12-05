@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pokemon.R
+import com.example.pokemon.adapter.PokemonAdapter
 import com.example.pokemon.databinding.FragmentPokemonBinding
 import com.example.pokemon.model.network.APIHelper
 import com.example.pokemon.model.network.ResponseResource
