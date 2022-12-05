@@ -8,6 +8,8 @@
     <string name="abilities_title">Abilities</string>
     <string name="error_msg">Error Loading Data, Try Again</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pokemon_detail_image_content_description">Image of Pokemon</string>
+    <string name="menu_item_share_pokemon">Share</string>
+    <string name="menu_item_share_plant">Share</string>
 
 </resources>

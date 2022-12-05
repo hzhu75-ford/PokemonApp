@@ -45,11 +45,6 @@ class PokemonDetailFragment : Fragment() {
 
     //Update Pokemon Details on UI
     private fun updateDataOnUI(pokemonDetails: PokemonItem?) {
-        Log.d(TAG, "${pokemonDetails?.abilities}")
-        binding.pokemonName.text = pokemonDetails?.name.orEmpty()
-        binding.pokemonAbilities.text = pokemonDetails?.abilities.orEmpty()
-        val statsDetails = pokemonDetails?.stats?.joinToString(separator = " ") { "${it.name}: ${it.effort}/${it.baseStat}"}
-        binding.pokemonStats.text = statsDetails
-        Picasso.get().load(pokemonDetails?.imageURL).into(binding.pokemonImage)
+        Picasso.get().load(pokemonDetails?.imageURL).into(binding.detailImage)
     }
 }

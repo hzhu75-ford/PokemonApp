@@ -4,4 +4,9 @@
     <dimen name="recycler_view_item_spacing">8dp</dimen>
     <dimen name="detail_image_width_height">300dp</dimen>
     <dimen name="pok_image_width_height">100dp</dimen>
+    <dimen name="pokemon_detail_app_bar_height">278dp</dimen>
+    <dimen name="image_bottom_padding">72dp</dimen>
+    <dimen name="toolbar_elevation">5dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
 </resources>

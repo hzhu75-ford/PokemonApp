@@ -13,7 +13,7 @@
             android:id="@+id/pokemon_image"
             android:layout_width="@dimen/pok_image_width_height"
             android:layout_height="@dimen/pok_image_width_height"
-            android:background="@drawable/ic_launcher_background"
+            android:background="@drawable/ic_background"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
