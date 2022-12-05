@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material.MaterialTheme
 import androidx.fragment.app.activityViewModels
 import com.example.pokemon.databinding.FragmentPokemonDetailsBinding
+import com.example.pokemon.ui.pokemonDetail.PokemonDetailDescription
 import com.example.pokemon.viewmodel.PokemonItem
 import com.example.pokemon.viewmodel.PokemonViewModel
 import com.squareup.picasso.Picasso
@@ -26,6 +28,16 @@ class PokemonDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPokemonDetailsBinding.inflate(inflater, container, false)
+            .apply {
+                composeView.setContent {
+                    // You're in Compose world!
+                    MaterialTheme {
+                        PokemonDetailDescription()
+                    }
+                }
+
+
+            }
         return binding.root
     }
 
