@@ -19,16 +19,15 @@ import com.example.pokemon.viewmodel.PokemonViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
+import javax.inject.Inject
 
-private const val TAG = "PokemonDetailFragment"
 class PokemonDetailFragment : Fragment() {
     private var _binding: FragmentPokemonDetailsBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+
     private val binding get() = _binding!!
 
-    private val pokemonViewModel: PokemonViewModel by activityViewModels()
+    val pokemonViewModel: PokemonViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

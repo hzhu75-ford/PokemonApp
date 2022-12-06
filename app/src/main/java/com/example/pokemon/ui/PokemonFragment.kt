@@ -40,7 +40,6 @@ class PokemonFragment : Fragment() {
     ): View {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_pokemon,container, false)
         pokemonItemAdapter = PokemonAdapter { pokemon -> adapterOnClick(pokemon) }
-        // Set the adapter
         binding.recyclerView.apply {
             adapter = pokemonItemAdapter
             addItemDecoration(
@@ -52,7 +51,6 @@ class PokemonFragment : Fragment() {
         return binding.root
     }
 
-    /* Opens PokemonDetailFragment when RecyclerView item is clicked. */
     private fun adapterOnClick(pokemonItem: PokemonBaseItem) {
         when (pokemonItem) {
             is PokemonItem -> {

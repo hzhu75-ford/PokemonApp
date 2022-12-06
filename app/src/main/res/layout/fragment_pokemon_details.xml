@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type ="com.example.pokemon.model.response.pokemon.PokemonItems"/>
         <variable
             name="viewmodel"
             type="com.example.pokemon.viewmodel.PokemonViewModel" />

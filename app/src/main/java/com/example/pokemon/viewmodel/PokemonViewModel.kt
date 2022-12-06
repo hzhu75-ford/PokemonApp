@@ -13,13 +13,12 @@ import com.example.pokemon.model.response.pokemon.PokemonItems
 import com.example.pokemon.model.response.pokemoninfo.PokemonInfo
 import com.example.pokemon.model.response.pokemoninfo.Stat
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
-class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
+class PokemonViewModel @Inject constructor(private val apiHelper: APIHelper) : ViewModel() {
 
-    //Data model to hold list of Main API response
     private lateinit var pokemonItems: PokemonItems
 
-    //Data model to hold all the data required for UI to show and nextPageURL
     private var pokemonData: PokemonItemsList = PokemonItemsList()
 
     private val mutableSelectedPokemonItem = MutableLiveData<PokemonItem>()
@@ -34,19 +33,16 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
     val pokemonInfo : LiveData<ResponseResource<PokemonItemsList>>
         get() = _pokemonInfo
 
-    //Set selected item which will be observed in Details screen
     fun updateSelectedPokemon(selectedItem: PokemonItem){
         mutableSelectedPokemonItem.value = selectedItem
     }
 
-    //Get next page URL to load data
     fun getNextPageURL() = pokemonData.nextPageURL
 
     init {
         fetchPokemonList()
     }
 
-    // Filter required stats and build a string
     private fun getStatsDetails(stats: List<Stat>? = null) : List<StatsDetails>?  =
         stats?.filter {
             it.stat.name in requiredStatsList
@@ -54,7 +50,6 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
             StatsDetails(it.stat.name.replaceFirstChar { type -> type.uppercase() }, it.base_stat, it.effort)
         }
 
-    //To update loading status on the UI
     private fun updateLoadingStatus(){
         _pokemonInfo.value =
             if(pokemonData.pokemonItems.isEmpty())
@@ -65,7 +60,6 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
                 })
     }
 
-    //Create list of pokemon with required fields to show On UI from API response
     private fun getAllPokemonDetails( responses: List<Pair<String, PokemonInfo>>? = null): List<PokemonItem>  {
         val pokemonItems = mutableListOf<PokemonItem>()
         responses?.forEach { (_, response) ->
@@ -87,8 +81,7 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
         return pokemonItems
     }
 
-    //Fetch list of Pokemon and details using service
-    // Currently offset and limit set to 10
+
     fun fetchPokemonList(url: String = INITIAL_URL) {
         updateLoadingStatus()
         viewModelScope.launch {
@@ -111,7 +104,6 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
         }
     }
 
-    //Update PokemonItemsList with latest data and live data
     private fun updateLiveData(listOfPokemon: List<PokemonItem>, nextURL: String?= null){
         pokemonData.apply {
             pokemonItems = pokemonItems.plus(listOfPokemon)
@@ -125,7 +117,6 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
     }
 
     fun addPokemonToCollection() {
-        TODO("Not yet implemented")
     }
 
     companion object{
@@ -133,7 +124,6 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
     }
 }
 
-//To construct all the required data to UI
 data class PokemonItemsList(var pokemonItems: List<PokemonBaseItem> = emptyList(),
                             var loadMoreItem: LoadMoreItems = LoadMoreItems(),
                             var nextPageURL: String?= null) {

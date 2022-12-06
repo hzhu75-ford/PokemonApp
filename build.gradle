@@ -12,6 +12,7 @@ buildscript {
         constraintLayoutVersion = '2.1.4'
         coreTestingVersion = '2.1.0'
         coroutinesVersion = "1.6.3"
+        dagger_version = "2.40"
         // TODO: Updating to 3.4.0 leads to dependency conflicts
         espressoVersion = '3.3.0'
         fragmentVersion = '1.5.0'
@@ -25,6 +26,7 @@ buildscript {
         lifecycleVersion = '2.5.0'
         materialVersion = '1.6.1'
         materialComposeAdapterVersion = '1.1.21'
+        mockitoVersion = '3.3.3'
         navigationVersion = '2.5.3'
         recyclerViewVersion = '1.2.1'
         roomVersion = '2.5.0-alpha02'
@@ -34,6 +36,7 @@ buildscript {
         uiAutomatorVersion = '2.2.0'
         viewPagerVersion = '1.0.0'
         workVersion = '2.7.1'
+
     }
     repositories {
         google()
