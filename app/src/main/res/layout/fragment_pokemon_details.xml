@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="viewmodel"
+            type="com.example.pokemon.viewmodel.PokemonViewModel" />
+        <variable
+            name="callback"
+            type="com.example.pokemon.ui.PokemonDetailFragment.Callback" />
 
     </data>
 

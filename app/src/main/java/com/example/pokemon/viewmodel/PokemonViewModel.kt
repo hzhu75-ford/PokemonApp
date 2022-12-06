@@ -124,6 +124,10 @@ class PokemonViewModel(private val apiHelper: APIHelper) : ViewModel() {
         _pokemonInfo.postValue(ResponseResource.success(data = pokemonData))
     }
 
+    fun addPokemonToCollection() {
+        TODO("Not yet implemented")
+    }
+
     companion object{
         private const val TAG = "PokemonViewModel"
     }

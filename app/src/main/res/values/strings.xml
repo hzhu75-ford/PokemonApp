@@ -12,5 +12,6 @@
     <string name="menu_item_share_pokemon">Share</string>
     <string name="menu_item_share_plant">Share</string>
     <string name="share_text_pokemon">Check out the %s pokemon in the Android Pokemon app</string>
+    <string name="added_pokemon_to_collection">Added pokemon to collection</string>
 
 </resources>
