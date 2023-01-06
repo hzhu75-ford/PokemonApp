@@ -3,8 +3,11 @@
 Write a simple Android app using whichever libraries you wish to include to speed up your development. This project will
 be presented to team members for discussion where you will get a chance to show off your project and explain your
 design process.
+
 ● Use the API data from: https://pokeapi.co/
+
 ● Use this as an opportunity to showcase your abilities: easy to follow, clean code is preferred
+
 ● Steps:
 ○ Set up your environment
 ○ Write your code
