@@ -8,10 +8,6 @@ design process.
 
 ● Use this as an opportunity to showcase your abilities: easy to follow, clean code is preferred
 
-● Steps:
-○ Set up your environment
-○ Write your code
-○ When ready, email us a zip of the project or make a pull request on Github and share the link
 Requirements:
 Use the pokeapi.co API to get data from the network and display it in a list in the main app screen. Selecting an item in
 the list should bring up a detail page. Refer to the requirements below to implement the UX.
